@@ -1,0 +1,159 @@
+/* screen - logistic */
+
+.logistic {
+  align-items: flex-start;
+  background-color: var(--white);
+  display: flex;
+  height: 6108px;
+  overflow: hidden;
+  width: 678px;
+}
+
+.logistic .arrow_back-container {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  min-height: 6100px;
+  width: 25px;
+}
+
+.logistic .arrow_back {
+  cursor: pointer;
+  height: 24px;
+  margin-left: 1px;
+  width: 24px;
+}
+
+.logistic .arrow_back-1 {
+  cursor: pointer;
+  height: 24px;
+  margin-top: 2141px;
+  width: 24px;
+}
+
+.logistic .arrow_back-2 {
+  cursor: pointer;
+  height: 24px;
+  margin-top: 1466px;
+  width: 24px;
+}
+
+.logistic .arrow_back-3 {
+  cursor: pointer;
+  height: 24px;
+  margin-top: 1436px;
+  width: 24px;
+}
+
+.logistic .arrow_back-4 {
+  cursor: pointer;
+  height: 24px;
+  margin-top: 937px;
+  width: 24px;
+}
+
+.logistic .page-container {
+  height: 6495px;
+  margin-top: 25px;
+  position: relative;
+  width: 612px;
+}
+
+.logistic .page-1 {
+  background-image: url(../img/page-1.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 792px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 612px;
+}
+
+.logistic .page-2 {
+  background-image: url(../img/page-2.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 774px;
+  left: 0;
+  position: absolute;
+  top: 754px;
+  width: 612px;
+}
+
+.logistic .page-3 {
+  background-image: url(../img/page-3.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 792px;
+  left: 0;
+  position: absolute;
+  top: 1406px;
+  width: 612px;
+}
+
+.logistic .page-4 {
+  background-image: url(../img/page-4.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 792px;
+  left: 0;
+  position: absolute;
+  top: 2133px;
+  width: 612px;
+}
+
+.logistic .page-5 {
+  background-image: url(../img/page-5.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 792px;
+  left: 0;
+  position: absolute;
+  top: 2883px;
+  width: 612px;
+}
+
+.logistic .page-6 {
+  background-image: url(../img/page-6.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 792px;
+  left: 0;
+  position: absolute;
+  top: 3608px;
+  width: 612px;
+}
+
+.logistic .page-7 {
+  background-image: url(../img/page-7.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 792px;
+  left: 0;
+  position: absolute;
+  top: 4334px;
+  width: 612px;
+}
+
+.logistic .page-8 {
+  background-image: url(../img/page-8.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 792px;
+  left: 0;
+  position: absolute;
+  top: 5065px;
+  width: 612px;
+}
+
+.logistic .page-9 {
+  background-image: url(../img/page-9.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 698px;
+  left: 17px;
+  position: absolute;
+  top: 5797px;
+  width: 577px;
+}

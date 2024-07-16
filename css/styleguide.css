@@ -1,0 +1,67 @@
+:root { 
+  --black: #2d2d2d;
+  --black-2: #000000;
+  --dark-fern: #064710;
+  --white: #ffffff;
+ 
+  --font-size-68px: 68px;
+  --font-size-l: 20px;
+  --font-size-m: 17px;
+  --font-size-xl: 24px;
+  --font-size-xxl: 27px;
+  --font-size-xxxl: 32px;
+  --font-size-xxxxl: 54.1px;
+  --font-size-xxxxxl: 80px;
+ 
+  --font-family-avantgarde_lt_medium-regular: "AvantGarde LT Medium-Regular", Helvetica;
+  --font-family-epilogue-medium: "Epilogue-Medium", Helvetica;
+  --font-family-epilogue-regular: "Epilogue-Regular", Helvetica;
+  --font-family-epilogue-semibold: "Epilogue-SemiBold", Helvetica;
+}
+.h1 {
+  font-family: var(--font-family-epilogue-semibold);
+  font-size: var(--font-size-68px);
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.h2 {
+  font-family: var(--font-family-epilogue-semibold);
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.subtitle {
+  font-family: var(--font-family-epilogue-semibold);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.body-text {
+  font-family: var(--font-family-epilogue-regular);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.h3 {
+  font-family: var(--font-family-epilogue-semibold);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.avantgardeltmedium-regular-normal-dark-fern-24px {
+  color: var(--dark-fern);
+  font-family: var(--font-family-avantgarde_lt_medium-regular);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 400;
+}

@@ -1,0 +1,472 @@
+/* screen - cover */
+
+.cover {
+  align-items: flex-start;
+  background-color: #3b3b3b;
+  display: flex;
+  height: 2922px;
+  padding: 88px 80px;
+  width: 1980px;
+}
+
+.cover .flex-col {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-top: 12.81px;
+  min-height: 548px;
+  width: 458px;
+}
+
+.cover .portfolio-template {
+  color: var(--white);
+  font-family: var(--font-family-epilogue-semibold);
+  font-size: 91.5px;
+  font-weight: 600;
+  height: 206px;
+  letter-spacing: 0;
+  line-height: 102.7px;
+}
+
+.cover .line-1 {
+  height: 1px;
+  margin-left: 0;
+  margin-top: 49px;
+  object-fit: cover;
+  width: 422px;
+}
+
+.cover .export-your-designs-to-html-code {
+  color: var(--white);
+  font-family: var(--font-family-epilogue-medium);
+  font-size: var(--font-size-xxxxl);
+  font-weight: 500;
+  height: 219px;
+  letter-spacing: 0;
+  line-height: 72.7px;
+  margin-top: 72px;
+  width: 458px;
+}
+
+.cover .flex-col-1 {
+  align-items: flex-start;
+  gap: 31px;
+  margin-left: 97px;
+  min-height: 1928px;
+  width: 621px;
+}
+
+.cover .header-section {
+  align-items: center;
+  background-color: var(--white);
+  flex-wrap: wrap;
+  gap: 42px 42.82px;
+  justify-content: flex-end;
+  padding: 26.45px 75.11px;
+  width: 617px;
+}
+
+.cover .header-content {
+  align-items: flex-start;
+  flex: 1;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 30.22px;
+  max-width: 390.41px;
+  min-width: 201.5px;
+}
+
+.cover .title-subtitle {
+  align-items: flex-start;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 15.11px;
+  width: 100%;
+}
+
+.cover .branding-image-making {
+  align-self: stretch;
+  color: var(--black);
+  font-weight: 600;
+  line-height: 30px;
+  margin-top: -0.63px;
+  position: relative;
+}
+
+.cover .visual-designer {
+  align-self: stretch;
+  color: var(--black);
+  font-weight: 600;
+  line-height: normal;
+  position: relative;
+}
+
+.cover .button {
+  align-items: center;
+  background-color: var(--black);
+  cursor: pointer;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 6.3px;
+  justify-content: center;
+  padding: 15.11px 40.3px;
+  position: relative;
+}
+
+.cover .place {
+  color: var(--white);
+  font-family: var(--font-family-epilogue-semibold);
+  font-size: 12.6px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 18.9px;
+  margin-top: -0.63px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.cover .header-image-1 {
+  flex: 1;
+  flex-grow: 1;
+  height: 226.69px;
+  max-width: 302.25px;
+  min-width: 201.5px;
+  position: relative;
+}
+
+.cover .gallery-1281 {
+  align-items: flex-end;
+  background-color: var(--white);
+  display: flex;
+  gap: 22px;
+  height: 1577px;
+  margin-left: 2.41px;
+  padding: 545.9px 48.0px;
+  transform: rotate(-0.15deg);
+  width: 619px;
+}
+
+.cover .flex-col-2 {
+  align-items: flex-start;
+  gap: 29px;
+  margin-bottom: 0;
+  min-height: 437px;
+  width: 159px;
+}
+
+.cover .gallery-card-1280-1 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  min-height: 204px;
+  width: 159px;
+}
+
+.cover .rectangle-1181 {
+  height: 160px;
+  object-fit: cover;
+  transform: rotate(0.15deg);
+  width: 160px;
+}
+
+.cover .project-title {
+  color: var(--black);
+  font-weight: 600;
+  line-height: 30px;
+  margin-bottom: -15px;
+  margin-left: 0;
+  margin-top: 11px;
+  min-height: 15px;
+  width: 159px;
+}
+
+.cover .ui-art-drection {
+  color: var(--black);
+  font-weight: 400;
+  line-height: 27px;
+  margin-bottom: -13px;
+  margin-left: 0;
+  margin-top: 4px;
+  min-height: 14px;
+  width: 159px;
+}
+
+.cover .component-11 {
+  margin-left: 0;
+  min-height: 204px;
+}
+
+.cover .flex-col-3 {
+  align-items: center;
+  min-height: 485px;
+  width: 159px;
+}
+
+.cover .latest-work {
+  color: var(--black);
+  font-weight: 600;
+  line-height: 42px;
+  margin-bottom: -21px;
+  margin-right: 0.3px;
+  min-height: 21px;
+  min-width: 92px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.cover .component-9 {
+  margin-right: 0;
+  margin-top: 27px;
+  min-height: 204px;
+}
+
+.cover .component-12 {
+  margin-left: 0;
+  margin-top: 29px;
+  min-height: 204px;
+}
+
+.cover .component-container {
+  gap: 29px;
+  min-height: 437px;
+}
+
+.cover .component-10 {
+  min-height: 204px;
+}
+
+.cover .component-13 {
+  min-height: 204px;
+}
+
+.cover .section-container {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-left: 26px;
+  min-height: 1114px;
+  width: 618px;
+}
+
+.cover .x-section {
+  align-items: center;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 20.28px;
+  padding: 20.28px 11.59px;
+  position: relative;
+  width: 618px;
+}
+
+.cover .cards-section {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  gap: 24px 11.59px;
+  position: relative;
+  width: 100%;
+}
+
+.cover .skills-card {
+  align-items: center;
+  background-color: var(--white);
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 20.28px;
+  justify-content: center;
+  min-width: 154.5px;
+  padding: 30.9px 20.28px;
+  position: relative;
+}
+
+.cover .skills-card-icon-1 {
+  height: 59.87px;
+  position: relative;
+  width: 59.87px;
+}
+
+.cover .title-description {
+  align-items: flex-start;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 5.79px;
+  width: 100%;
+}
+
+.cover .title {
+  color: var(--black);
+  font-weight: 600;
+  height: 20.28px;
+  line-height: 42px;
+  margin-top: -0.48px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.cover .this-is-a-template-f {
+  align-self: stretch;
+  color: var(--black);
+  font-weight: 400;
+  line-height: 27px;
+  position: relative;
+  text-align: center;
+}
+
+.cover .skills-card-icon-2 {
+  height: 59.87px;
+  position: relative;
+  width: 61.5px;
+}
+
+.cover .skills-card-icon-3 {
+  height: 61.5px;
+  position: relative;
+  width: 61.5px;
+}
+
+.cover .skills-card-1 {
+  align-items: flex-start;
+  background-color: var(--white);
+  display: flex;
+  flex: 1;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  gap: 20.28px 20.28px;
+  min-width: 154.5px;
+  padding: 30.9px 20.28px;
+  position: relative;
+}
+
+.cover .skills-card-icon-4 {
+  height: 30.9px;
+  position: relative;
+  width: 30.9px;
+}
+
+.cover .title-description-1 {
+  flex: 1;
+  flex-grow: 1;
+  gap: 5.79px;
+  min-width: 96.56px;
+}
+
+.cover .title-1 {
+  color: var(--black);
+  font-weight: 600;
+  line-height: 42px;
+  margin-top: -0.48px;
+}
+
+.cover .skills-card-icon {
+  height: 30.9px;
+  position: relative;
+  width: 32.53px;
+}
+
+.cover .skills-card-icon-5 {
+  height: 32.53px;
+  margin-left: -1.63px;
+  position: relative;
+  width: 32.53px;
+}
+
+.cover .latest-work-1 {
+  color: var(--black);
+  font-weight: 600;
+  line-height: 42px;
+  margin-top: -0.48px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.cover .cards-section-item {
+  align-items: flex-start;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 11.59px;
+  min-width: 154.5px;
+  position: relative;
+}
+
+.cover .image {
+  align-self: stretch;
+  height: 159.33px;
+  object-fit: cover;
+  position: relative;
+  width: 100%;
+}
+
+.cover .title-description-2 {
+  align-self: stretch;
+  flex: 0 0 auto;
+  gap: 3.86px;
+  width: 100%;
+}
+
+.cover .project-title-1 {
+  align-self: stretch;
+  color: var(--black);
+  font-weight: 600;
+  line-height: 30px;
+  margin-top: -0.48px;
+  position: relative;
+}
+
+.cover .component {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  width: 159px;
+}
+
+.cover .flex-col-4 {
+  display: flex;
+  flex-direction: column;
+}
+
+.cover .header {
+  display: flex;
+  position: relative;
+}
+
+.cover .this-is-a-template-f-6 {
+  align-self: stretch;
+  color: var(--black);
+  font-weight: 400;
+  line-height: 27px;
+  position: relative;
+}
+
+.cover .title-2 {
+  align-self: stretch;
+  position: relative;
+}
+
+.cover .title-description-3 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.cover .ui-art-drection-7 {
+  align-self: stretch;
+  color: var(--black);
+  font-weight: 400;
+  line-height: 27px;
+  position: relative;
+}
