@@ -1,0 +1,196 @@
+.frame {
+    background-color: #17291a;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.frame .div {
+    background-color: #17291a;
+    width: 2678px;
+    height: 4177px;
+    position: relative;
+}
+
+.frame .DSC {
+    position: absolute;
+    width: 1231px;
+    height: 711px;
+    top: 340px;
+    left: 127px;
+    object-fit: cover;
+}
+
+.frame .overlap {
+    position: absolute;
+    width: 1190px;
+    height: 2511px;
+    top: 338px;
+    left: 1361px;
+}
+
+.frame .img {
+    position: absolute;
+    width: 1190px;
+    height: 715px;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.frame .DSC-2 {
+    position: absolute;
+    width: 1190px;
+    height: 899px;
+    top: 714px;
+    left: 0;
+    object-fit: cover;
+}
+
+.frame .DSC-3 {
+    position: absolute;
+    width: 1190px;
+    height: 899px;
+    top: 1612px;
+    left: 0;
+    object-fit: cover;
+}
+
+.frame .overlap-group {
+    position: absolute;
+    width: 1233px;
+    height: 1806px;
+    top: 1052px;
+    left: 127px;
+}
+
+.frame .img-2 {
+    position: absolute;
+    width: 1231px;
+    height: 899px;
+    top: 898px;
+    left: 0;
+    object-fit: cover;
+}
+
+.frame .DSC-4 {
+    position: absolute;
+    width: 1233px;
+    height: 899px;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.frame .text-wrapper {
+    position: absolute;
+    width: 359px;
+    top: 1792px;
+    left: 4px;
+    font-family: "AvantGarde LT Medium-Regular", Helvetica;
+    font-weight: 400;
+    color: #fff505;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 24px;
+    white-space: nowrap;
+}
+
+.frame .DSC-5 {
+    position: absolute;
+    width: 820px;
+    height: 1088px;
+    top: 2878px;
+    left: 138px;
+    object-fit: cover;
+}
+
+.frame .DSC-6 {
+    position: absolute;
+    width: 820px;
+    height: 1088px;
+    top: 2878px;
+    left: 1705px;
+    object-fit: cover;
+}
+
+.frame .IMG {
+    position: absolute;
+    width: 721px;
+    height: 1088px;
+    top: 2878px;
+    left: 971px;
+    object-fit: cover;
+}
+
+.frame .overlap-2 {
+    position: absolute;
+    width: 688px;
+    height: 190px;
+    top: 142px;
+    left: 1008px;
+}
+
+.frame .photography {
+    position: absolute;
+    width: 688px;
+    top: 0;
+    left: 0;
+    font-family: "AvantGarde LT Medium-Regular", Helvetica;
+    font-weight: 400;
+    color: #fdf4e3;
+    font-size: 36px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 24px;
+}
+
+.frame .span {
+    text-decoration: underline;
+}
+
+.frame .text-wrapper-2 {
+    font-size: 24px;
+    text-decoration: underline;
+}
+
+.frame .text-wrapper-3 {
+    font-size: 24px;
+}
+
+.frame .home {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    top: 62px;
+    left: 327px;
+    transition: all 0.2s ease;
+}
+
+.frame .linkedin {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    top: 4034px;
+    left: 1239px;
+    transition: all 0.25s ease-in;
+}
+
+.frame .mail {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    top: 4034px;
+    left: 1404px;
+    transition: all 0.25s ease-in;
+}
+
+.frame .home-2 {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    top: 4034px;
+    left: 1325px;
+    transition: all 0.2s ease;
+}
