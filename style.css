@@ -1,0 +1,83 @@
+.index {
+    background-color: #fcf3e2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .index .div {
+    background-color: #fcf3e2;
+    width: 1440px;
+    height: 1024px;
+    position: relative;
+  }
+  
+  .index .text-wrapper {
+    position: absolute;
+    width: 97px;
+    top: 480px;
+    left: 702px;
+    transition: all 0.25s ease-in;
+    font-family: "AvantGarde LT Medium-Regular", Helvetica;
+    font-weight: 400;
+    color: #064710;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .index .text-wrapper-2 {
+    position: absolute;
+    width: 157px;
+    top: 480px;
+    left: 1178px;
+    transition: all 0.25s ease-in;
+    font-family: "AvantGarde LT Medium-Regular", Helvetica;
+    font-weight: 400;
+    color: #064710;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .index .text-wrapper-3 {
+    position: absolute;
+    width: 93px;
+    top: 480px;
+    left: 942px;
+    transition: all 0.2s ease;
+    font-family: "AvantGarde LT Medium-Regular", Helvetica;
+    font-weight: 400;
+    color: #064710;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .index .mail {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    top: 670px;
+    left: 90px;
+    transition: all 0.25s ease-in;
+  }
+  
+  .index .linkedin {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    top: 668px;
+    left: 35px;
+    transition: all 0.25s ease-in;
+  }
+  
+  .index .vector {
+    position: absolute;
+    width: 630px;
+    height: 301px;
+    top: 361px;
+    left: 0;
+  }
+  
