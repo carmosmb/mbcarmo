@@ -1,0 +1,46 @@
+:root { 
+  --black: #000000;
+  --dark-fern: #064710;
+  --old-lace: #fdf4e3;
+ 
+  --font-size-l: 24px;
+  --font-size-m: 20px;
+  --font-size-s: 13px;
+  --font-size-xl: 40px;
+  --font-size-xs: 8px;
+  --font-size-xxs: 7px;
+  --font-size-xxxs: 4px;
+ 
+  --font-family-avantgarde_lt_medium-regular: "AvantGarde LT Medium-Regular", Helvetica;
+}
+.avantgardeltmedium-regular-normal-dark-fern-24px {
+  color: var(--dark-fern);
+  font-family: var(--font-family-avantgarde_lt_medium-regular);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.avantgardeltmedium-regular-normal-old-lace-24px {
+  color: var(--old-lace);
+  font-family: var(--font-family-avantgarde_lt_medium-regular);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.avantgardeltmedium-regular-normal-black-40px {
+  color: var(--black);
+  font-family: var(--font-family-avantgarde_lt_medium-regular);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.avantgardeltmedium-regular-normal-black-13px {
+  color: var(--black);
+  font-family: var(--font-family-avantgarde_lt_medium-regular);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+}

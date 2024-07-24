@@ -1,0 +1,17 @@
+/* screen - page-1 */
+
+.page-1 {
+  background-image: url(../img/page-1-1.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  display: flex;
+  min-height: 792px;
+  min-width: 612px;
+  width: 100%;
+}
+
+.page-1 .arrow_back {
+  cursor: pointer;
+  height: 24px;
+  width: 24px;
+}

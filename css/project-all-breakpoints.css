@@ -1,0 +1,625 @@
+/* screen - project-all-breakpoints */
+
+.project-all-breakpoints {
+  align-items: flex-start;
+  background-color: var(--old-lace);
+  display: flex;
+  flex-direction: column;
+  height: 2417px;
+  padding: 71px 41px;
+  width: 1440px;
+}
+
+.project-all-breakpoints .overlap-group2 {
+  height: 75px;
+  margin-left: 37px;
+  position: relative;
+  width: 872px;
+}
+
+.project-all-breakpoints .title {
+  color: var(--dark-fern);
+  font-family: var(--font-family-avantgarde_lt_medium-regular);
+  font-size: 75px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-decoration: underline;
+  top: 0;
+  white-space: nowrap;
+  width: 872px;
+}
+
+.project-all-breakpoints .home {
+  cursor: pointer;
+  height: 48px;
+  left: 347px;
+  position: absolute;
+  top: 27px;
+  transition: all 0.2s ease;
+  width: 48px;
+}
+
+.project-all-breakpoints .home:hover {
+  transform: scale(0.9); 
+}
+
+.project-all-breakpoints .this-page-is-a-showc {
+  color: var(--dark-fern);
+  font-family: var(--font-family-avantgarde_lt_medium-regular);
+  font-size: var(--font-size-m);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-left: 33px;
+  margin-top: 27px;
+  min-height: 111px;
+  width: 926px;
+}
+
+.project-all-breakpoints .overlap-group {
+  align-self: flex-end;
+  height: 420px;
+  margin-top: 45px;
+  position: relative;
+  width: 1335px;
+}
+
+.project-all-breakpoints .solar-suitability {
+  height: 420px;
+  left: 665px;
+  position: absolute;
+  top: 0;
+  width: 670px;
+}
+
+.project-all-breakpoints .nba {
+  height: 420px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 670px;
+}
+
+.project-all-breakpoints .solar-energy-potenti {
+  color: #ffffff;
+  cursor: pointer;
+  font-family: var(--font-family-avantgarde_lt_medium-regular);
+  font-size: var(--font-size-xl);
+  font-weight: 400;
+  left: 675px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 9px;
+  transition: all 0.2s ease;
+  width: 650px;
+}
+
+.project-all-breakpoints .solar-energy-potenti:hover {
+  transform: scale(0.9); 
+}
+
+.project-all-breakpoints .nba-gm-for-a-day-an {
+  color: #000903;
+  cursor: pointer;
+  font-family: var(--font-family-avantgarde_lt_medium-regular);
+  font-size: var(--font-size-xl);
+  font-weight: 400;
+  left: 10px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 9px;
+  transition: all 0.2s ease;
+  width: 650px;
+}
+
+.project-all-breakpoints .nba-gm-for-a-day-an:hover {
+  transform: scale(0.9); 
+}
+
+.project-all-breakpoints .overlap-group3 {
+  align-self: flex-end;
+  height: 1003px;
+  margin-top: 12px;
+  position: relative;
+  width: 1347px;
+}
+
+.project-all-breakpoints .overlap-group4 {
+  height: 1003px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1347px;
+}
+
+.project-all-breakpoints .overlap-group1 {
+  height: 844px;
+  left: 0;
+  position: absolute;
+  top: 159px;
+  width: 1347px;
+}
+
+.project-all-breakpoints .terrain {
+  height: 420px;
+  left: 12px;
+  position: absolute;
+  top: 253px;
+  width: 670px;
+}
+
+.project-all-breakpoints .kenpom {
+  height: 420px;
+  left: 677px;
+  position: absolute;
+  top: 424px;
+  width: 670px;
+}
+
+.project-all-breakpoints .final-project {
+  height: 420px;
+  left: 677px;
+  position: absolute;
+  top: 0;
+  width: 670px;
+}
+
+.project-all-breakpoints .logistical-regressio {
+  cursor: pointer;
+  left: 687px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 433px;
+  transition: all 0.2s ease;
+  width: 650px;
+}
+
+.project-all-breakpoints .logistical-regressio:hover {
+  transform: scale(0.9); 
+}
+
+.project-all-breakpoints .terrain-derivatives {
+  cursor: pointer;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 262px;
+  transition: all 0.2s ease;
+  width: 650px;
+}
+
+.project-all-breakpoints .terrain-derivatives:hover {
+  transform: scale(0.9); 
+}
+
+.project-all-breakpoints .final-research-proje {
+  cursor: pointer;
+  left: 687px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 9px;
+  transition: all 0.2s ease;
+  width: 650px;
+}
+
+.project-all-breakpoints .final-research-proje:hover {
+  transform: scale(0.9); 
+}
+
+.project-all-breakpoints .cities-skylines {
+  height: 400px;
+  left: 22px;
+  position: absolute;
+  top: 0;
+  width: 650px;
+}
+
+.project-all-breakpoints .cities-skylines-ii {
+  color: var(--dark-fern);
+  font-family: var(--font-family-avantgarde_lt_medium-regular);
+  font-size: var(--font-size-m);
+  font-weight: 400;
+  left: 679px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 15px;
+  width: 634px;
+}
+
+.project-all-breakpoints .line-1 {
+  top: 0;
+}
+
+.project-all-breakpoints .line-2 {
+  top: 100px;
+}
+
+.project-all-breakpoints .flex-row {
+  align-items: flex-start;
+  align-self: center;
+  display: flex;
+  height: 53px;
+  margin-left: 54.0px;
+  margin-top: 168px;
+  min-width: 696px;
+}
+
+.project-all-breakpoints .linkedin {
+  align-self: flex-end;
+  cursor: pointer;
+  height: 48px;
+  transition: all 0.25s ease-in;
+  width: 48px;
+}
+
+.project-all-breakpoints .linkedin:hover {
+  transform: scale(0.9); 
+}
+
+.project-all-breakpoints .home-1 {
+  cursor: pointer;
+  height: 48px;
+  margin-left: 284px;
+  margin-top: 1px;
+  transition: all 0.2s ease;
+  width: 48px;
+}
+
+.project-all-breakpoints .home-1:hover {
+  transform: scale(0.9); 
+}
+
+.project-all-breakpoints .mail {
+  cursor: pointer;
+  height: 48px;
+  margin-left: 268px;
+  transition: all 0.25s ease-in;
+  width: 48px;
+}
+
+.project-all-breakpoints .mail:hover {
+  transform: scale(0.9); 
+}
+
+.project-all-breakpoints .line {
+  height: 5px;
+  left: 672px;
+  position: absolute;
+  width: 96px;
+}
+/* screen - projectu95phone */
+
+.projectu95phone {
+  align-items: flex-end;
+  background-color: var(--old-lace);
+  display: flex;
+  flex-direction: column;
+  gap: 105px;
+  height: 812px;
+  padding: 10px 7px;
+  width: 375px;
+}
+
+.projectu95phone .flex-col {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 522px;
+  width: 360px;
+}
+
+.projectu95phone .flex-row-1 {
+  gap: 51px;
+  height: 113px;
+  margin-right: 2.0px;
+  min-width: 330px;
+}
+
+.projectu95phone .flex-col-1 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-height: 113px;
+  width: 259px;
+}
+
+.projectu95phone .title-1 {
+  color: var(--dark-fern);
+  font-family: var(--font-family-avantgarde_lt_medium-regular);
+  font-size: var(--font-size-xl);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  min-height: 43px;
+  text-decoration: underline;
+  white-space: nowrap;
+}
+
+.projectu95phone .this-page-is-a-showc-1 {
+  color: var(--dark-fern);
+  font-family: var(--font-family-avantgarde_lt_medium-regular);
+  font-size: var(--font-size-xs);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  min-height: 55px;
+  width: 259px;
+}
+
+.projectu95phone .home-2 {
+  cursor: pointer;
+  height: 20px;
+  margin-top: 23px;
+  transition: all 0.2s ease;
+  width: 20px;
+}
+
+.projectu95phone .home-2:hover {
+  transform: scale(0.9); 
+}
+
+.projectu95phone .overlap-group2-1 {
+  height: 121px;
+  margin-top: 3px;
+  position: relative;
+  width: 360px;
+}
+
+.projectu95phone .nba-1 {
+  height: 121px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 181px;
+}
+
+.projectu95phone .nba-gm-for-a-day-an-1 {
+  color: #000903;
+  cursor: pointer;
+  font-family: var(--font-family-avantgarde_lt_medium-regular);
+  font-size: var(--font-size-s);
+  font-weight: 400;
+  left: 3px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 2px;
+  transition: all 0.2s ease;
+  width: 175px;
+}
+
+.projectu95phone .nba-gm-for-a-day-an-1:hover {
+  transform: scale(0.9); 
+}
+
+.projectu95phone .solar-suitability-1 {
+  height: 121px;
+  left: 179px;
+  position: absolute;
+  top: 0;
+  width: 181px;
+}
+
+.projectu95phone .solar-energy-potenti-1 {
+  color: #ffffff;
+  cursor: pointer;
+  font-family: var(--font-family-avantgarde_lt_medium-regular);
+  font-size: var(--font-size-s);
+  font-weight: 400;
+  left: 182px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 2px;
+  transition: all 0.2s ease;
+  width: 175px;
+}
+
+.projectu95phone .solar-energy-potenti-1:hover {
+  transform: scale(0.9); 
+}
+
+.projectu95phone .overlap-group3-1 {
+  height: 283px;
+  margin-top: 2px;
+  position: relative;
+  width: 360px;
+}
+
+.projectu95phone .line-container {
+  height: 115px;
+  left: 3px;
+  position: absolute;
+  top: 0;
+  width: 315px;
+}
+
+.projectu95phone .cities-skylines-1 {
+  height: 115px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 175px;
+}
+
+.projectu95phone .cities-skylines-ii-1 {
+  color: var(--dark-fern);
+  font-family: var(--font-family-avantgarde_lt_medium-regular);
+  font-size: var(--font-size-xxs);
+  font-weight: 400;
+  left: 175px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 1px;
+  width: 140px;
+}
+
+.projectu95phone .line-1-1 {
+  height: 2px;
+  left: 173px;
+  position: absolute;
+  top: 0;
+  width: 37px;
+}
+
+.projectu95phone .overlap-group-1 {
+  height: 241px;
+  left: 0;
+  position: absolute;
+  top: 42px;
+  width: 360px;
+}
+
+.projectu95phone .final-project-1 {
+  height: 121px;
+  left: 179px;
+  position: absolute;
+  top: 0;
+  width: 181px;
+}
+
+.projectu95phone .final-research-proje-1 {
+  cursor: pointer;
+  left: 182px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 2px;
+  transition: all 0.2s ease;
+  width: 175px;
+}
+
+.projectu95phone .final-research-proje-1:hover {
+  transform: scale(0.9); 
+}
+
+.projectu95phone .terrain-1 {
+  height: 121px;
+  left: 0;
+  position: absolute;
+  top: 75px;
+  width: 181px;
+}
+
+.projectu95phone .terrain-derivatives-1 {
+  cursor: pointer;
+  left: 3px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 77px;
+  transition: all 0.2s ease;
+  width: 175px;
+}
+
+.projectu95phone .terrain-derivatives-1:hover {
+  transform: scale(0.9); 
+}
+
+.projectu95phone .kenpom-1 {
+  height: 121px;
+  left: 179px;
+  position: absolute;
+  top: 120px;
+  width: 181px;
+}
+
+.projectu95phone .logistical-regressio-1 {
+  cursor: pointer;
+  left: 182px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 122px;
+  transition: all 0.2s ease;
+  width: 175px;
+}
+
+.projectu95phone .logistical-regressio-1:hover {
+  transform: scale(0.9); 
+}
+
+.projectu95phone .line-3 {
+  height: 2px;
+  left: 178px;
+  position: absolute;
+  top: 39px;
+  width: 35px;
+}
+
+.projectu95phone .flex-row-2 {
+  align-self: center;
+  margin-left: 4.0px;
+  min-width: 179px;
+}
+
+.projectu95phone .mail-1 {
+  cursor: pointer;
+  height: 20px;
+  transition: all 0.25s ease-in;
+  width: 20px;
+}
+
+.projectu95phone .mail-1:hover {
+  transform: scale(0.9); 
+}
+
+.projectu95phone .home-3 {
+  cursor: pointer;
+  height: 20px;
+  margin-left: 66px;
+  transition: all 0.2s ease;
+  width: 20px;
+}
+
+.projectu95phone .home-3:hover {
+  transform: scale(0.9); 
+}
+
+.projectu95phone .linkedin-1 {
+  cursor: pointer;
+  height: 20px;
+  margin-left: 53px;
+  transition: all 0.25s ease-in;
+  width: 20px;
+}
+
+.projectu95phone .linkedin-1:hover {
+  transform: scale(0.9); 
+}
+
+.projectu95phone .flex-row {
+  align-items: flex-start;
+  display: flex;
+}
+@media screen and (max-width: 1439px) {
+  .screen.project-all-breakpoints { 
+    display: none;
+   }
+}
+@media screen and (min-width: 1440px) {
+  .screen.projectu95phone { 
+    display: none;
+   }
+}

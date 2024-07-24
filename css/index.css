@@ -1,0 +1,205 @@
+/* screen - index-all-breakpoints */
+
+.index-all-breakpoints {
+  align-items: flex-start;
+  background-color: #fcf3e2;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  height: 1024px;
+  padding: 306px 0;
+  width: 1440px;
+}
+
+.index-all-breakpoints .flex-row-1 {
+  align-items: center;
+  display: flex;
+  margin-top: 55px;
+  min-width: 1335px;
+}
+
+.index-all-breakpoints .vector-1 {
+  height: 301px;
+  width: 630px;
+}
+
+.index-all-breakpoints .title-1 {
+  cursor: pointer;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-bottom: 25.2px;
+  margin-left: 72px;
+  min-height: 38px;
+  transition: all 0.25s ease-in;
+  width: 97px;
+}
+
+.index-all-breakpoints .title-1:hover {
+  transform: scale(0.9); 
+}
+
+.index-all-breakpoints .projects-1 {
+  cursor: pointer;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-bottom: 20.2px;
+  margin-left: 143px;
+  min-height: 43px;
+  transition: all 0.2s ease;
+  width: 93px;
+}
+
+.index-all-breakpoints .projects-1:hover {
+  transform: scale(0.9); 
+}
+
+.index-all-breakpoints .photography-1 {
+  cursor: pointer;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-bottom: 27.2px;
+  margin-left: 143px;
+  min-height: 36px;
+  transition: all 0.25s ease-in;
+  width: 157px;
+}
+
+.index-all-breakpoints .photography-1:hover {
+  transform: scale(0.9); 
+}
+
+.index-all-breakpoints .flex-row-2 {
+  align-items: flex-start;
+  display: flex;
+  gap: 7px;
+  height: 50px;
+  margin-left: 35px;
+  min-width: 103px;
+}
+
+.index-all-breakpoints .linkedin-1 {
+  cursor: pointer;
+  height: 48px;
+  transition: all 0.25s ease-in;
+  width: 48px;
+}
+
+.index-all-breakpoints .linkedin-1:hover {
+  transform: scale(0.9); 
+}
+
+.index-all-breakpoints .mail-1 {
+  align-self: flex-end;
+  cursor: pointer;
+  height: 48px;
+  transition: all 0.25s ease-in;
+  width: 48px;
+}
+
+.index-all-breakpoints .mail-1:hover {
+  transform: scale(0.9); 
+}
+/* screen - indexu95phone */
+
+.indexu95phone {
+  align-items: flex-start;
+  background-color: #fcf3e2;
+  display: flex;
+  flex-direction: column;
+  height: 812px;
+  padding: 23px 0;
+  width: 375px;
+}
+
+.indexu95phone .vector {
+  height: 110px;
+  width: 235px;
+}
+
+.indexu95phone .title {
+  cursor: pointer;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-left: 31px;
+  margin-top: 10px;
+  min-height: 38px;
+  transition: all 0.25s ease-in;
+  width: 97px;
+}
+
+.indexu95phone .title:hover {
+  transform: scale(0.9); 
+}
+
+.indexu95phone .photography {
+  cursor: pointer;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-left: 31px;
+  margin-top: 17px;
+  min-height: 36px;
+  transition: all 0.25s ease-in;
+  width: 157px;
+}
+
+.indexu95phone .photography:hover {
+  transform: scale(0.9); 
+}
+
+.indexu95phone .projects {
+  cursor: pointer;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-left: 31px;
+  margin-top: 17px;
+  min-height: 43px;
+  transition: all 0.2s ease;
+  width: 93px;
+}
+
+.indexu95phone .projects:hover {
+  transform: scale(0.9); 
+}
+
+.indexu95phone .flex-row {
+  align-items: flex-start;
+  display: flex;
+  gap: 3px;
+  height: 22px;
+  margin-left: 31px;
+  margin-top: 28px;
+  min-width: 43px;
+}
+
+.indexu95phone .linkedin {
+  cursor: pointer;
+  height: 20px;
+  transition: all 0.25s ease-in;
+  width: 20px;
+}
+
+.indexu95phone .linkedin:hover {
+  transform: scale(0.9); 
+}
+
+.indexu95phone .mail {
+  align-self: flex-end;
+  cursor: pointer;
+  height: 20px;
+  transition: all 0.25s ease-in;
+  width: 20px;
+}
+
+.indexu95phone .mail:hover {
+  transform: scale(0.9); 
+}
+@media screen and (max-width: 1439px) {
+  .screen.index-all-breakpoints { 
+    display: none;
+   }
+}
+@media screen and (min-width: 1440px) {
+  .screen.indexu95phone { 
+    display: none;
+   }
+}
