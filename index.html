@@ -1,22 +1,227 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-    <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
-    <meta name="og:type" content="website" />
-    <meta name="twitter:card" content="photo" />
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <style></style>
-    <link rel="stylesheet" type="text/css" href="css/styleguide.css" />
-    <link rel="stylesheet" type="text/css" href="css/globals.css" />
-  </head>
-  <body style="margin: 0; background: #fcf3e2">
-    <input type="hidden" id="anPageName" name="page" value="index-all-breakpoints" />
+    <title>Matthew Carmosino</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+    <style>
+        @font-face {
+          font-family: "AvantGarde LT Medium-Regular";
+          font-style: normal;
+          font-weight: 400;
+          src: url("fonts/ITC Avant Garde Gothic LT Medium.ttf") format("truetype");
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'AvantGarde LT Medium-Regular', Arial, sans-serif;
+            background: #fcf3e2;
+            color: #2d4a22;
+            overflow-x: hidden;
+        }
+
+        .container-center-horizontal {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            pointer-events: none;
+            width: 100%;
+        }
+
+        .container-center-horizontal > * {
+            flex-shrink: 0;
+            pointer-events: auto;
+        }
+
+        .screen {
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Mobile Layout */
+        .indexu95phone {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            width: 100%;
+            padding: 2rem;
+            position: relative;
+        }
+
+        /* Desktop Layout */
+        .index-all-breakpoints {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            width: 100%;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .name-header {
+            font-size: 32px;
+            color: #2d4a22;
+            font-weight: normal;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .green-bar {
+            width: 80px;
+            height: 4px;
+            background: #2d4a22;
+            margin: 0 auto 3rem auto;
+        }
+
+        .vector, .vector-1 {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 3rem;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #2d4a22;
+            opacity: 0.9;
+            transition: all 0.3s ease;
+        }
+
+        .vector:hover, .vector-1:hover {
+            transform: scale(1.05);
+            opacity: 1;
+        }
+
+        .title, .title-1 {
+            font-size: 24px;
+            color: #2d4a22;
+            text-decoration: none;
+            margin-bottom: 2rem;
+            font-weight: normal;
+            transition: all 0.3s ease;
+        }
+
+        .title:hover, .title-1:hover {
+            transform: scale(0.95);
+            opacity: 0.7;
+        }
+
+        .photography, .photography-1,
+        .projects, .projects-1 {
+            font-size: 24px;
+            color: #2d4a22;
+            text-decoration: none;
+            margin-bottom: 2rem;
+            font-weight: normal;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .photography:hover, .photography-1:hover,
+        .projects:hover, .projects-1:hover {
+            transform: scale(0.9);
+            opacity: 0.7;
+        }
+
+        .flex-row, .flex-row-2 {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+            align-items: center;
+        }
+
+        .flex-row-1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .linkedin, .linkedin-1,
+        .mail, .mail-1 {
+            width: 32px;
+            height: 32px;
+            transition: all 0.3s ease;
+            opacity: 0.8;
+        }
+
+        .linkedin:hover, .linkedin-1:hover,
+        .mail:hover, .mail-1:hover {
+            transform: scale(1.1);
+            opacity: 1;
+        }
+
+        .align-self-flex-end {
+            align-self: flex-end;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Canvas styling */
+        #p5-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        /* Media Queries */
+        @media (min-width: 768px) {
+            .indexu95phone {
+                display: none;
+            }
+            
+            .index-all-breakpoints {
+                display: flex;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .indexu95phone {
+                display: flex;
+            }
+            
+            .index-all-breakpoints {
+                display: none;
+            }
+            
+            .vector {
+                width: 100px;
+                height: 100px;
+                margin-bottom: 2rem;
+            }
+            
+            .title, .photography, .projects {
+                font-size: 20px;
+                margin-bottom: 1.5rem;
+            }
+            
+            .linkedin, .mail {
+                width: 28px;
+                height: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="p5-canvas"></div>
+    
+    <!-- Mobile Layout -->
     <div class="container-center-horizontal">
       <div class="indexu95phone screen">
         <img class="vector" src="img/vector@2x.png" alt="Vector" />
-        <a href="docs/resume.pdf" target="_blank"><h1 class="title avantgardeltmedium-regular-normal-dark-fern-24px">Resume</h1> </a>
+        <a href="docs/resume_v1.pdf" target="_blank"><h1 class="title avantgardeltmedium-regular-normal-dark-fern-24px">Resume</h1> </a>
         <a href="progress.html">
           <div class="photography avantgardeltmedium-regular-normal-dark-fern-24px">Photography</div> 
         </a>
@@ -33,11 +238,13 @@
         </div>
       </div>
     </div>
+
+    <!-- Desktop Layout -->
     <div class="container-center-horizontal">
       <div class="index-all-breakpoints screen">
         <div class="flex-row-1">
           <img class="vector-1" src="img/vector.png" alt="Vector" />
-          <a href="docs/resume.pdf" target="_blank">
+          <a href="docs/resume_v1.pdf" target="_blank">
             <h1 class="title-1 avantgardeltmedium-regular-normal-dark-fern-24px">Resume</h1> 
           </a>
           <a href="project-all-breakpoints.html">
@@ -57,5 +264,84 @@
         </div>
       </div>
     </div>
-  </body>
+
+    <script>
+        let particles = [];
+        let time = 0;
+
+        function setup() {
+            let canvas = createCanvas(windowWidth, windowHeight);
+            canvas.parent('p5-canvas');
+            
+            // Create very subtle particles
+            for (let i = 0; i < 25; i++) {
+                particles.push({
+                    x: random(width),
+                    y: random(height),
+                    vx: random(-0.2, 0.2),
+                    vy: random(-0.2, 0.2),
+                    size: random(1, 2),
+                    alpha: random(10, 30)
+                });
+            }
+        }
+
+        function draw() {
+            clear();
+            
+            time += 0.003;
+
+            // Very subtle background pattern
+            stroke(45, 74, 34, 5);
+            strokeWeight(0.5);
+            
+            for (let i = 0; i < width; i += 150) {
+                for (let j = 0; j < height; j += 150) {
+                    let wave = sin(time + i * 0.005 + j * 0.005) * 10;
+                    point(i + wave, j + wave);
+                }
+            }
+
+            // Ultra minimal particle movement
+            for (let particle of particles) {
+                particle.x += particle.vx + sin(time + particle.y * 0.002) * 0.05;
+                particle.y += particle.vy + cos(time + particle.x * 0.002) * 0.05;
+
+                // Wrap around screen
+                if (particle.x < 0) particle.x = width;
+                if (particle.x > width) particle.x = 0;
+                if (particle.y < 0) particle.y = height;
+                if (particle.y > height) particle.y = 0;
+
+                // Draw minimal particles
+                fill(45, 74, 34, particle.alpha);
+                noStroke();
+                ellipse(particle.x, particle.y, particle.size);
+            }
+        }
+
+        function windowResized() {
+            resizeCanvas(windowWidth, windowHeight);
+        }
+
+        // Add subtle mouse interaction
+        function mouseMoved() {
+            if (random() < 0.02) {
+                particles.push({
+                    x: mouseX + random(-30, 30),
+                    y: mouseY + random(-30, 30),
+                    vx: random(-0.1, 0.1),
+                    vy: random(-0.1, 0.1),
+                    size: random(0.5, 1.5),
+                    alpha: random(15, 25)
+                });
+            }
+
+            // Keep particle count low
+            if (particles.length > 40) {
+                particles.shift();
+            }
+        }
+    </script>
+</body>
 </html>
