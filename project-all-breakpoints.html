@@ -1,158 +1,515 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-    <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
-    <meta name="og:type" content="website" />
-    <meta name="twitter:card" content="photo" />
-    <link rel="stylesheet" type="text/css" href="css/project-all-breakpoints.css" />
-    <style></style>
-    <link rel="stylesheet" type="text/css" href="css/styleguide.css" />
-    <link rel="stylesheet" type="text/css" href="css/globals.css" />
-  </head>
-  <body style="margin: 0; background: #fdf4e3">
-    <input type="hidden" id="anPageName" name="page" value="project-all-breakpoints" />
-    <div class="container-center-horizontal">
-      <div class="project-all-breakpoints screen">
-        <div class="overlap-group2">
-          <h1 class="title">Projects</h1>
-          <a href="index.html"><img class="home" src="img/home-2@2x.png" alt="Home" /> </a>
-        </div>
-        <p class="this-page-is-a-showc">
-          This page is a showcase of past and present projects. They include projects from my time at Vanderbilt and
-          personal passion projects and range in a wide variety of topics from Data Analysis, GIS, Drawings, and
-          whatever new hobby I am into at the time. I hope you enjoy checking these out as much as I did working on
-          them!
-        </p>
-        <div class="overlap-group">
-          <img class="solar-suitability" src="img/solar-suitability.png" alt="Solar Suitability" />
-          <img class="nba" src="img/nba.png" alt="NBA" />
-          <a href="docs/solar.pdf" target="_blank"
-            ><p class="solar-energy-potenti">
-              Solar Energy Potential Research in <br />Glover Park, Washington D.C. <br />Using ArcGIS and the
-              Suitability<br />Modeler
-            </p> </a
-          ><a href="docs/nba.pdf" target="_blank" 
-            ><p class="nba-gm-for-a-day-an">
-              NBA GM For A Day:<br />An investigation of Offensive Rebounding<br />Percentage as a Primary Metric for<br />Assessing
-              Potential Players
+    <title>Matthew Carmosino - Projects</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+    <style>
+        @font-face {
+          font-family: "AvantGarde LT Medium-Regular";
+          font-style: normal;
+          font-weight: 400;
+          src: url("fonts/ITC Avant Garde Gothic LT Medium.ttf") format("truetype");
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'AvantGarde LT Medium-Regular', Arial, sans-serif;
+            background: #fcf3e2;
+            color: #2d4a22;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 4rem 0 2rem 0;
+            border-bottom: 1px solid rgba(45, 74, 34, 0.1);
+            margin-bottom: 3rem;
+        }
+
+        .page-title {
+            font-size: 48px;
+            color: #2d4a22;
+            font-weight: normal;
+            margin-bottom: 1rem;
+        }
+
+        .green-bar {
+            width: 60px;
+            height: 4px;
+            background: #2d4a22;
+            margin: 0 auto 2rem auto;
+        }
+
+        .page-description {
+            font-size: 18px;
+            color: #2d4a22;
+            opacity: 0.8;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .home-link {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            width: 32px;
+            height: 32px;
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+
+        .home-link:hover {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
+        /* Project Cards */
+        .projects-container {
+            margin-bottom: 4rem;
+        }
+
+        .project-card {
+            display: flex;
+            margin-bottom: 4rem;
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(45, 74, 34, 0.1);
+            transition: all 0.4s ease;
+            overflow: hidden;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(45, 74, 34, 0.2);
+            box-shadow: 0 20px 40px rgba(45, 74, 34, 0.1);
+        }
+
+        .project-image {
+            flex: 0 0 300px;
+            height: 250px;
+            background: #f8f8f8;
+            border-right: 1px solid rgba(45, 74, 34, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.05);
+        }
+
+        .pdf-overlay {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(45, 74, 34, 0.9);
+            color: white;
+            padding: 0.3rem 0.6rem;
+            font-size: 12px;
+            border-radius: 3px;
+        }
+
+        .project-content {
+            flex: 1;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .project-title {
+            font-size: 24px;
+            color: #2d4a22;
+            font-weight: normal;
+            margin-bottom: 1rem;
+        }
+
+        .project-description {
+            font-size: 16px;
+            color: #2d4a22;
+            opacity: 0.8;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .project-meta {
+            font-size: 14px;
+            color: #2d4a22;
+            opacity: 0.6;
+            margin-bottom: 1rem;
+        }
+
+        .project-link {
+            align-self: flex-start;
+            padding: 0.8rem 1.5rem;
+            background: transparent;
+            color: #2d4a22;
+            text-decoration: none;
+            border: 2px solid #2d4a22;
+            font-weight: normal;
+            transition: all 0.3s ease;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+        }
+
+        .project-link:hover {
+            background: #2d4a22;
+            color: #fcf3e2;
+        }
+
+        /* Reverse layout for alternating cards */
+        .project-card:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .project-card:nth-child(even) .project-image {
+            border-right: none;
+            border-left: 1px solid rgba(45, 74, 34, 0.1);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 3rem 0;
+            border-top: 1px solid rgba(45, 74, 34, 0.1);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .footer-link {
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+
+        .footer-link:hover {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
+        .social-icon {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* P5.js Canvas */
+        #p5-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            opacity: 0.2;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+
+            .page-title {
+                font-size: 36px;
+            }
+
+            .project-card {
+                flex-direction: column !important;
+                margin-bottom: 3rem;
+            }
+
+            .project-card:nth-child(even) .project-image {
+                border-left: none;
+                border-bottom: 1px solid rgba(45, 74, 34, 0.1);
+            }
+
+            .project-image {
+                flex: none;
+                height: 200px;
+                border-right: none;
+                border-bottom: 1px solid rgba(45, 74, 34, 0.1);
+            }
+
+            .project-content {
+                padding: 1.5rem;
+            }
+
+            .project-title {
+                font-size: 20px;
+            }
+
+            .home-link {
+                top: 1rem;
+                right: 1rem;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="p5-canvas"></div>
+
+    <div class="container">
+        <!-- Home Link -->
+        <a href="index.html" class="home-link">
+            <svg viewBox="0 0 24 24" fill="#2d4a22">
+                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+            </svg>
+        </a>
+
+        <!-- Header -->
+        <div class="header">
+            <h1 class="page-title">Projects</h1>
+            <div class="green-bar"></div>
+            <p class="page-description">
+                A showcase of past and present projects from my time at Vanderbilt and personal passion projects. 
+                They range across Data Analysis, GIS, Statistical Modeling, and various other topics I'm passionate about.
             </p>
-          </a>
         </div>
-        <div class="overlap-group3">
-          <div class="overlap-group4">
-            <div class="overlap-group1">
-              <img class="terrain" src="img/terrain-1.png" alt="Terrain" />
-              <img class="kenpom" src="img/kenpom.png" alt="Kenpom" />
-              <img class="final-project" src="img/final-project.png" alt="Final Project" />
-              <a href="docs/logistic.pdf" target="_blank"
-                ><p class="logistical-regressio avantgardeltmedium-regular-normal-black-40px">
-                  Logistical Regression Analysis <br />to Classify Heart Disease Patients<br />Based on Key Variables
-                </p> </a
-              ><a href="docs/terrain.pdf" target="_blank"
-                ><p class="terrain-derivatives avantgardeltmedium-regular-normal-black-40px">
-                  Terrain Derivatives of the <br />Tennessee Smokey Mountains<br />
-                  National Park
-                </p> </a
-              ><a href="docs/gis_final.pdf" target="_blank"
-                ><p class="final-research-proje avantgardeltmedium-regular-normal-black-40px">
-                  <br />Final Research Project<br />ANTH 3261: Intro to GIS/Remote Sensing:<br />Oil and Gas on Native
-                  Reservations
-                </p>
-              </a>
+
+        <!-- Projects Container -->
+        <div class="projects-container">
+            
+            <!-- Solar Energy Project -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="img/solar-suitability.png" alt="Solar Energy GIS Analysis">
+                    <div class="pdf-overlay">PDF</div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Solar Energy Potential Research</h3>
+                    <div class="project-meta">GIS Analysis • ArcGIS • Suitability Modeling</div>
+                    <p class="project-description">
+                        Comprehensive GIS analysis investigating solar energy potential in Glover Park, Washington D.C. 
+                        Using ArcGIS and the Suitability Modeler, this research evaluates optimal locations for solar panel 
+                        installation based on multiple environmental and urban planning factors.
+                    </p>
+                    <a href="docs/solar.pdf" target="_blank" class="project-link">VIEW PROJECT</a>
+                </div>
             </div>
-            <img class="cities-skylines" src="img/cities-skylines.png" alt="cities skylines" />
-          </div>
-          <p class="cities-skylines-ii">
-            Cities: Skylines II Gameplay:<br />Custom made community garden lined by medium density housing. Loosely
-            inspired by South End, Boston.
-          </p>
-          <img class="line-1 line" src="img/line-1@2x.png" alt="Line 1" />
-          <img class="line-2 line" src="img/line-1@2x.png" alt="Line 2" />
+
+            <!-- NBA Analytics Project -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="img/nba.png" alt="NBA Statistical Analysis">
+                    <div class="pdf-overlay">PDF</div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">NBA GM For A Day</h3>
+                    <div class="project-meta">Sports Analytics • Statistics • Data Analysis</div>
+                    <p class="project-description">
+                        Statistical investigation of Offensive Rebounding Percentage as a primary metric for assessing 
+                        potential NBA players. Analysis of 2019 regular season data to determine the efficacy of ORP 
+                        in predicting team success and player value.
+                    </p>
+                    <a href="docs/nba.pdf" target="_blank" class="project-link">VIEW PROJECT</a>
+                </div>
+            </div>
+
+            <!-- Heart Disease Classification -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="img/kenpom.png" alt="Logistic Regression Analysis">
+                    <div class="pdf-overlay">PDF</div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Heart Disease Classification</h3>
+                    <div class="project-meta">Machine Learning • R Programming • Logistic Regression</div>
+                    <p class="project-description">
+                        Logistic regression analysis to classify heart disease patients based on key medical variables. 
+                        Utilized R programming for data preprocessing, model development, and statistical validation 
+                        achieving 71.5% classification accuracy.
+                    </p>
+                    <a href="docs/logistic.pdf" target="_blank" class="project-link">VIEW PROJECT</a>
+                </div>
+            </div>
+
+            <!-- Terrain Analysis -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="img/terrain-1.png" alt="Terrain Derivatives Analysis">
+                    <div class="pdf-overlay">PDF</div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Terrain Derivatives Analysis</h3>
+                    <div class="project-meta">GIS • Topographic Analysis • National Parks</div>
+                    <p class="project-description">
+                        Comprehensive terrain analysis of the Tennessee Smoky Mountains National Park using advanced 
+                        GIS techniques. Calculated slope, aspect, and curvature derivatives to understand topographic 
+                        characteristics and their environmental implications.
+                    </p>
+                    <a href="docs/terrain.pdf" target="_blank" class="project-link">VIEW PROJECT</a>
+                </div>
+            </div>
+
+            <!-- Oil and Gas Research -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="img/final-project.png" alt="Native Reservations Research">
+                    <div class="pdf-overlay">PDF</div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Oil and Gas on Native Reservations</h3>
+                    <div class="project-meta">Spatial Analysis • Social Justice • GIS Research</div>
+                    <p class="project-description">
+                        Spatial analysis investigating the relationship between oil and natural gas deposits on Southwest 
+                        Native American reservations and their effect on median household income. Research examines 
+                        resource ownership patterns and economic impacts on indigenous communities.
+                    </p>
+                    <a href="docs/gis_final.pdf" target="_blank" class="project-link">VIEW PROJECT</a>
+                </div>
+            </div>
+
+            <!-- Cities Skylines -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="img/cities-skylines.png" alt="Cities Skylines Urban Planning">
+                    <div class="pdf-overlay">GAME</div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Urban Planning Simulation</h3>
+                    <div class="project-meta">Cities: Skylines II • Urban Design • Community Planning</div>
+                    <p class="project-description">
+                        Custom-designed community garden lined by medium density housing in Cities: Skylines II. 
+                        Urban planning project loosely inspired by Boston's South End, demonstrating sustainable 
+                        community design principles and mixed-use development strategies.
+                    </p>
+                    <a href="#" class="project-link">VIEW IMAGES</a>
+                </div>
+            </div>
+
         </div>
-        <div class="flex-row">
-          <a href="https://www.linkedin.com/in/matthew-carmosino" target="_blank" class="align-self-flex-end"
-            ><img class="linkedin" src="img/linkedin@2x.png" alt="Linkedin" /> </a
-          ><a href="index.html"><img class="home-1" src="img/home-2@2x.png" alt="Home" /> </a
-          ><a href="mailto:matthew.b.carmosino@vanderbilt.edu" target="_blank"
-            ><img class="mail" src="img/mail@2x.png" alt="Mail" />
-          </a>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footer-links">
+                <a href="mailto:matthew.b.carmosino@vanderbilt.edu" class="footer-link">
+                    <svg class="social-icon" viewBox="0 0 24 24" fill="#2d4a22">
+                        <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-.904.732-1.636 1.636-1.636h.905L12 11.365l9.459-7.544h.905c.904 0 1.636.732 1.636 1.636z"/>
+                    </svg>
+                </a>
+                <a href="index.html" class="footer-link">
+                    <svg class="social-icon" viewBox="0 0 24 24" fill="#2d4a22">
+                        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/matthew-carmosino" target="_blank" class="footer-link">
+                    <svg class="social-icon" viewBox="0 0 24 24" fill="#2d4a22">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                </a>
+            </div>
         </div>
-      </div>
     </div>
-    <div class="container-center-horizontal">
-      <div class="projectu95phone screen">
-        <div class="flex-col">
-          <div class="flex-row-1 flex-row">
-            <div class="flex-col-1">
-              <h1 class="title-1">Projects</h1>
-              <p class="this-page-is-a-showc-1">
-                This page is a showcase of past and present projects. They include projects from my time at Vanderbilt
-                and personal passion projects and range in a wide variety of topics from Data Analysis, GIS, Drawings,
-                and whatever new hobby I am into at the time. I hope you enjoy checking these out as much as I did
-                working on them!
-              </p>
-            </div>
-            <a href="index.html"><img class="home-2" src="img/home-2@2x.png" alt="Home" /> </a>
-          </div>
-          <div class="overlap-group2-1">
-            <img class="nba-1" src="img/nba-1.png" alt="NBA" />
-            <a href="docs/nba.pdf" target="_blank"
-              ><p class="nba-gm-for-a-day-an-1">
-                NBA GM For A Day:<br />An investigation of Offensive Rebounding<br />Percentage as a Primary Metric
-                for<br />Assessing Potential Players
-              </p> </a
-            ><img class="solar-suitability-1" src="img/solar-suitability-1.png" alt="Solar Suitability" />
-            <a href="docs/solar.pdf" target="_blank"
-              ><p class="solar-energy-potenti-1">
-                Solar Energy Potential Research in <br />Glover Park, Washington D.C. <br />Using ArcGIS and the
-                Suitability<br />Modeler
-              </p>
-            </a>
-          </div>
-          <div class="overlap-group3-1">
-            <div class="line-container">
-              <img class="cities-skylines-1" src="img/cities-skylines-1.png" alt="cities skylines" />
-              <p class="cities-skylines-ii-1">
-                Cities: Skylines II Gameplay:<br />Custom made community garden lined by medium density housing. Loosely
-                inspired by South End, Boston.
-              </p>
-              <img class="line-1-1" src="img/line-1-1@2x.png" alt="Line 1" />
-            </div>
-            <div class="overlap-group-1">
-              <img class="final-project-1" src="img/final-project-1.png" alt="Final Project" />
-              <a href="docs/gis_final.pdf" target="_blank"
-                ><p class="final-research-proje-1 avantgardeltmedium-regular-normal-black-13px">
-                  <br />Final Research Project<br />ANTH 3261: Intro to GIS/Remote Sensing:<br />Oil and Gas on Native
-                  Reservations
-                </p> </a
-              ><img class="terrain-1" src="img/terrain-1.png" alt="Terrain" />
-              <a href="docs/terrain.pdf" target="_blank"
-                ><p class="terrain-derivatives-1 avantgardeltmedium-regular-normal-black-13px">
-                  Terrain Derivatives of the <br />Tennessee Smokey Mountains<br />
-                  National Park
-                </p> </a
-              ><img class="kenpom-1" src="img/kenpom-1.png" alt="Kenpom" />
-              <a href="docs/logistic.pdf" target="_blank"
-                ><p class="logistical-regressio-1 avantgardeltmedium-regular-normal-black-13px">
-                  Logistical Regression Analysis <br />to Classify Heart Disease Patients<br />Based on Key Variables
-                </p>
-              </a>
-            </div>
-            <img class="line-3" src="img/line-3@2x.png" alt="Line 3" />
-          </div>
-        </div>
-        <div class="flex-row-2 flex-row">
-          <a href="mailto:matthew.b.carmosino@vanderbilt.edu" target="_blank"
-            ><img class="mail-1" src="img/mail-1@2x.png" alt="Mail" /> </a
-          ><a href="-index.html"><img class="home-3" src="img/home-2@2x.png" alt="Home" /> </a
-          ><a href="https://www.linkedin.com/in/matthew-carmosino" target="_blank"
-            ><img class="linkedin-1" src="img/linkedin-1@2x.png" alt="Linkedin" />
-          </a>
-        </div>
-      </div>
-    </div>
-  </body>
+
+    <script>
+        let particles = [];
+        let time = 0;
+
+        function setup() {
+            let canvas = createCanvas(windowWidth, windowHeight);
+            canvas.parent('p5-canvas');
+            
+            // Create minimal particles for subtle background effect
+            for (let i = 0; i < 30; i++) {
+                particles.push({
+                    x: random(width),
+                    y: random(height),
+                    vx: random(-0.2, 0.2),
+                    vy: random(-0.2, 0.2),
+                    size: random(1, 2),
+                    alpha: random(10, 25)
+                });
+            }
+        }
+
+        function draw() {
+            clear();
+            
+            time += 0.003;
+
+            // Very subtle background grid
+            stroke(45, 74, 34, 3);
+            strokeWeight(0.5);
+            
+            for (let i = 0; i < width; i += 200) {
+                for (let j = 0; j < height; j += 200) {
+                    let wave = sin(time + i * 0.003 + j * 0.003) * 5;
+                    point(i + wave, j + wave);
+                }
+            }
+
+            // Minimal floating particles
+            for (let particle of particles) {
+                particle.x += particle.vx + sin(time + particle.y * 0.001) * 0.03;
+                particle.y += particle.vy + cos(time + particle.x * 0.001) * 0.03;
+
+                // Wrap around screen
+                if (particle.x < 0) particle.x = width;
+                if (particle.x > width) particle.x = 0;
+                if (particle.y < 0) particle.y = height;
+                if (particle.y > height) particle.y = 0;
+
+                // Draw particles
+                fill(45, 74, 34, particle.alpha);
+                noStroke();
+                ellipse(particle.x, particle.y, particle.size);
+            }
+        }
+
+        function windowResized() {
+            resizeCanvas(windowWidth, windowHeight);
+        }
+
+        // Smooth scrolling for better UX
+        document.addEventListener('DOMContentLoaded', function() {
+            const projectCards = document.querySelectorAll('.project-card');
+            
+            // Add intersection observer for scroll animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            projectCards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
 </html>
