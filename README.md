@@ -1,4 +1,3 @@
 # mbcarmo
-My portfolio
+My portfolio, website, resume, and whatever else I want to shoot into the void
 
-Hello World!
